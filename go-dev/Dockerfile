@@ -4,8 +4,12 @@ FROM golang:$GOVERSION-alpine
 
 RUN apk add \
     bash \
+    ca-certificates \
+    dpkg \
+    gcc \
     git \
-    make
+    make \
+    musl-dev
 
 RUN go get github.com/onsi/ginkgo/ginkgo
 
